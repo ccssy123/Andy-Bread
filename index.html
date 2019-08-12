@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1, maximum-scale=2">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style type="text/css">
+    .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+    * {
+        font-family: 微軟正黑體, Noto Sans TC
+    }
+    #banner {
+        background-image: url(images/about.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #a-1 {
+        background-image: url(images/未命名檔案夾/丹麥菠蘿.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .section h2 {
+        font-size: 60px;
+
+    }
+
+    .col-sm-6 .btn {
+        border: 2px solid #4f2506;
+        color: #4f2506;
+        font-size: 20px;
+        margin-top: 20px;
+
+    }
+
+    .col-sm-6 .btn:hover {
+        color: red;
+        border: 5px solid red;
+    }
+
+    form button:hover {
+        background-color: red !important;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .wrepper-1 {
+        background-color: #fffaf0;
+        border-radius: 5px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+
+    }
+
+    .wrepper {
+        background-color: #fffaf0;
+        border-radius: 5px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        transition: 1s all;
+    }
+
+    .wrepper:hover {
+        border-radius: 50%;
+
+
+    }
+
+    #a-2 {
+        background-image: url(images/banner01.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #a-3 {
+        background-image: url(images/甜甜圈/photo-1516919549054-e08258825f80.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #a-4 {
+        background-image: url(images/banner04.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .slide {
+        text-align: center;
+    }
+
+    nav {
+        z-index: 1000 !important;
+    }
+
+    label {
+        color: #fff;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+
+    }
+
+    .navbar li a {
+        color: #fff !important;
+    }
+
+    .navbar li a:hover {
+        color: #ff6c00 !important;
+    }
+
+    /*fp-sr-only*/
+    .fp-right a:hover {
+        transform: scale(1.5) !important;
+        filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.7));
+    }
+
+    .fp-right {
+        top: 70% !important;
+        background-color: #fff;
+    }
+
+    /*bg*/
+    .bg {
+        background-color: #fffaf0;
+    }
+
+    /*about*/
+     .about-bg {
+        background-image: url(images/about-bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /*contact-us-bg*/
+    .contact-us-bg {
+        background-image: url(images/about.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*product*/
+    .product-bg {
+        background-image: url(images/about.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /*資訊*/
+    .news-bg {
+        background-image: url(images/資訊.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /**/
+    .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(0, 0, 0, 0.0);
+        color: #fff !important;
+    }
+
+    .bg-success {
+        background-color: #fff;
+    }
+    .navbar-light .navbar-toggler-icon{
+    	  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    /**/
+    @media (max-width: 376px) {
+        .col-sm h3{
+            font-size: 12px!important;
+        
+    }
+    @media (max-width: 320px) {
+        .new h1{
+            margin-top: 10px!important;
+        }
+    }
+    @media (max-width: 376px) {
+        .about-bg h1{
+            font-size: 23px!important;
+        }
+    }
+    /**/
+    .navbar-toggler{
+    	border-color:#fff!important;
+    }
+    .navbar-toggler-icon{
+    	color: #fff;
+    }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" style="border-color:#fff!important;"type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style=""></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul id="myMenu" class="navbar-nav flip animated">
+                <li class="nav-item active" data-menuanchor="firstPage">
+                    <a class="nav-link" href="#firstPage">封面</a>
+                </li>
+                <li class="nav-item" data-menuanchor="secondPage">
+                    <a class="nav-link" href="#secondPage">關於我們</a>
+                </li>
+                <li class="nav-item" data-menuanchor="thirdPage">
+                    <a class="nav-link" href="#thirdPage">麵包分類</a>
+                </li>
+                <li class="nav-item" data-menuanchor="fourthPage">
+                    <a class="nav-link" href="#fourthPage">聯絡我們</a>
+                </li>
+                <li class="nav-item" data-menuanchor="lastPage">
+                    <a class="nav-link" href="#lastPage">聯絡資訊</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        麵包區
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Bread.html#section1">可頌麵包</a>
+                        <a class="dropdown-item" href="Bread.html#section2">甜甜圈</a>
+                        <a class="dropdown-item" href="Bread.html#section2">雜糧麵包</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   
+    <div id="fullpage">
+        <div class="section active">
+            <div id="banner" class="slide" data-anchor="slide1">
+                <div class="container">
+                    <div class="">
+                        <img class="bounceInDown animated delay-2"style="display: block;margin:0 auto;" src="images/logo.png">
+                        <div class="animated jackInTheBox delay-4">
+                        <h2 class=""style="text-align: center;color: #fff;text-shadow: 1px 1px 1px rgba(0,0,0,0.4)">安迪的麵包店</h2>
+                        <h4 class=""style="text-align: center;color: #fff;text-shadow: 1px 1px 1px rgba(0,0,0,0.4)">- Andy Bread -</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="" class="section about-bg">
+            <div class="container">
+         
+                <h1 style="text-align: center;color: #4f2506;" class="title">關於安迪的麵包店</h1>
+                <p style="text-align: center;color: #4f2506;" class="subtitle">About Andy Bread</p>
+                <div class="row">
+                    <div class="col-sm ">
+                        <h3 style="color: #4e4e4e;z-index: 100;text-align: center;font-size: 18px;line-height:40px;">
+                            1999年高志忠烘焙大師創立丹麥之屋法式西點麵包，成立 1 7 年的丹麥之屋，秉持著對待消費者如同家人般，堅持嚴選烘焙原物料，相信透過口中味蕾就能使消費者感受到丹麥之屋的用心。
+                            <br>專賣歐法、雜糧麵包以及蛋糕，丹麥之屋顛覆一般傳統麵包店的風格，以歐法麵包、蛋糕為主打，將市場獨特性呈現出來。
+                            </h3>
+                    </div>
+                    <div class="col-sm">
+                        <img style="width: 100%;height: 100%;max-width: auto;max-height: auto;" src="images/banner04.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="" class="section">
+            <div id="a-1" class="slide" data-anchor="slide1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="wrepper">
+                                <h2 style="text-align: center;color: #4f2506;">可頌麵包</h2>
+                                <p style="color: #4f2506;font-size: 23px;">- Croissant -</p>
+                                <a href="Bread.html#section1" class="btn animated infinite bounce delay-5 tada" role="button">進入賣場</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="a-2" class="slide" data-anchor="slide2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="wrepper">
+                                <h2 style="text-align: center;color: #4f2506;">雜糧麵包</h2>
+                                <p style="color: #4f2506;font-size: 23px;">- Multi-grain Bread -</p>
+                                <a href="Bread.html#section2" class="btn animated infinite bounce delay-5 tada" role="button">進入賣場</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="a-3" class="slide" data-anchor="slide3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="wrepper">
+                                <h2 style="text-align: center;color: #4f2506;">甜甜圈</h2>
+                                <p style="color: #4f2506;font-size: 23px;">- Donut -</p>
+                                <a href="Bread.html#section3" class="btn animated infinite bounce delay-5 tada" role="button">進入賣場</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+        <div style="" class="section contact-us-bg">
+          
+                <div class="container">
+                    <h1 style="text-align: center;color: #fff;" class="title">聯絡我們</h1>
+                    <p style="text-align: center;color: #fff;" class="subtitle">Contact us</p>
+                    <form style="margin-top: 30px;" action="" method="post" name="myform" onSubmit="return check(this);">
+                        <div class="form-group">
+                            <label for="name">姓名 <font color="#d60000">*</font></label>
+                            <input style="float: left;margin-bottom: 20px;" required="required" required="required" type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="number">手機號碼 <font color="#d60000">*</font></label>
+                            <input required="required" required="required" name="number" type="text
+" class="form-control" id="number" aria-describedby="emailHelp" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">e-mail<font color="#d60000">*</font></label>
+                            <input required="required" name="exampleInputEmail1" required="required" type="text
+" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">留言內容</label>
+                            <textarea type="name" class="form-control" name="name" id="name" aria-describedby="emailHelp" placeholder="請留言...."></textarea>
+                        </div>
+                        <button style="width: 30%;background-color: #ff6c00;color:#fff;display: block;margin:0 auto;" type="submit" class="btn">送出</button>
+                    </form>
+                </div>
+          
+        </div>
+        <div style="" class="section news-bg">
+        	<div class="container">
+              <div class="row">
+              	<div style=""class="col-sm new">
+
+              		<h1 style="text-align: center;color: #fff;margin-top: 100px;" class="title">店購專線</h1>
+                    <p style="text-align: center;color: #fff;" class="subtitle">電話：02-4566-6344</p>
+                    <p style="text-align: center;color: #fff;" class="subtitle">地址：台北市大安區復興南路一段79巷2號</p>
+              	
+              	</div>
+              	<div class="col-sm map">
+              		<iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.6739320459013!2d121.54370042920749!3d25.044398014012234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdbb5338b3f%3A0x9a93b788f5aa33c3!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5b6p6IiI5Y2X6Lev5LiA5q61Nznlt7cy6Jmf!5e0!3m2!1szh-TW!2stw!4v1561776237945!5m2!1szh-TW!2stw" width="100%" height="100%" frameborder="0" style="border:0;height: 300px;" allowfullscreen></iframe>
+              		
+              </div>
+            </div>
+              	
+              		<p style="margin-top: 35px;color:#fff;text-align: center;display: block;">Copyright © 2019 Andy Beef All Right Received. | 版權所有 © Andy Beef有限公司</p>
+              
+              
+              </div>
+        </div>
+    </div>
+</body>
+<script src="vender/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="vender/easings.min.js"></script>
+<script src="vender/scrolloverflow.min.js"></script>
+<script src="vender/fullpage.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="vender/masonry/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+	//
+	AOS.init();
+	//
+
+new fullpage('#fullpage', {
+    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage']
+});
+  
+
+</script>
+
+</html>
